@@ -1,15 +1,18 @@
-def validate_num(a):
+def _validate_num(a) -> float:
     """
     Check if input is a valid Number
 
     Args:
         a: The input value of any type to check.
     Returns:
-        True if input is an int or float, False otherwise
+        None if value is not a valid number, returns the number itself if it is
     """
-    return isinstance(a,(int,float,complex)) and  not isinstance(a,bool)
+    if not isinstance(a,(float,int)) or isinstance(a,bool):
+        return None
+    
+    return float(a)
 
-def addition(a,b):
+def addition(a: float ,b: float) -> float:
     """
     adds two numbers
 
@@ -19,12 +22,12 @@ def addition(a,b):
     Returns:
         the sum of a and b
     """
-    if(validate_num(a) and validate_num(b)):
+    if not (_validate_num(a) and _validate_num(b)):
         return a + b
     else:   
         return "invalid input" #place holder, implement proper error later
 
-def subtraction(a,b):
+def subtraction(a: float,b: float) -> float:
     """
     subtracts b from a
 
@@ -34,12 +37,12 @@ def subtraction(a,b):
     Returns:
         the difference of b from a
     """
-    if(validate_num(a) and validate_num(b)):
+    if not (_validate_num(a) and _validate_num(b)):
         return a - b
     else:   
         return "invalid input" #place holder, implement proper error later
 
-def multiplication(a,b):
+def multiplication(a: float,b: float) -> float:
     """
     multiplies a and b
 
@@ -49,12 +52,12 @@ def multiplication(a,b):
     Returns:
         the product of a and b
     """
-    if(validate_num(a) and validate_num(b)):
+    if not (_validate_num(a) and _validate_num(b)):
         return a * b
     else:   
         return "invalid input" #place holder, implement proper error later
 
-def division(a,b):
+def division(a: float,b: float) -> float:
     """
     divided a by b
 
@@ -65,7 +68,7 @@ def division(a,b):
         returns the quotient of a and b
     """
     
-    if(validate_num(a) and validate_num(b)):
+    if not (_validate_num(a) and _validate_num(b)):
         return a / b
     else:   
         return "invalid input" #place holder, implement proper error later
