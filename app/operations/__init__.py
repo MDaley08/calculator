@@ -22,8 +22,11 @@ def addition(a: float ,b: float) -> float:
     Returns:
         the sum of a and b
     """
-    if not (_validate_num(a) and _validate_num(b)):
-        return a + b
+    val_a = _validate_num(a)
+    val_b = _validate_num(b)
+
+    if val_a and val_b:
+        return val_a + val_b
     else:   
         return "invalid input" #place holder, implement proper error later
 
@@ -37,8 +40,11 @@ def subtraction(a: float,b: float) -> float:
     Returns:
         the difference of b from a
     """
-    if not (_validate_num(a) and _validate_num(b)):
-        return a - b
+    val_a = _validate_num(a)
+    val_b = _validate_num(b)
+
+    if val_a and val_b:
+        return val_a - val_b
     else:   
         return "invalid input" #place holder, implement proper error later
 
@@ -52,8 +58,11 @@ def multiplication(a: float,b: float) -> float:
     Returns:
         the product of a and b
     """
-    if not (_validate_num(a) and _validate_num(b)):
-        return a * b
+    val_a = _validate_num(a)
+    val_b = _validate_num(b)
+
+    if val_a and val_b:
+        return val_a * val_b
     else:   
         return "invalid input" #place holder, implement proper error later
 
@@ -67,8 +76,10 @@ def division(a: float,b: float) -> float:
     Returns:
         returns the quotient of a and b
     """
-    
-    if not (_validate_num(a) and _validate_num(b)):
-        return a / b
+    val_a = _validate_num(a)
+    val_b = _validate_num(b)
+
+    if val_a and val_b:
+        return val_a / val_b
     else:   
         return "invalid input" #place holder, implement proper error later
