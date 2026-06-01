@@ -25,7 +25,7 @@ def addition(a: float ,b: float) -> float:
     val_a = _validate_num(a)
     val_b = _validate_num(b)
 
-    if val_a and val_b:
+    if val_a != None and val_b != None:
         return val_a + val_b
     else:   
         return "invalid input" #place holder, implement proper error later
@@ -43,7 +43,7 @@ def subtraction(a: float,b: float) -> float:
     val_a = _validate_num(a)
     val_b = _validate_num(b)
 
-    if val_a and val_b:
+    if val_a != None and val_b != None:
         return val_a - val_b
     else:   
         return "invalid input" #place holder, implement proper error later
@@ -61,7 +61,7 @@ def multiplication(a: float,b: float) -> float:
     val_a = _validate_num(a)
     val_b = _validate_num(b)
 
-    if val_a and val_b:
+    if val_a != None and val_b != None:
         return val_a * val_b
     else:   
         return "invalid input" #place holder, implement proper error later
@@ -79,7 +79,7 @@ def division(a: float,b: float) -> float:
     val_a = _validate_num(a)
     val_b = _validate_num(b)
 
-    if val_a and val_b:
+    if val_a != None and val_b != None:
         if b == 0:
             raise ValueError("Cannot divide by 0")
         return val_a / val_b
