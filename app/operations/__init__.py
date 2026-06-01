@@ -80,6 +80,8 @@ def division(a: float,b: float) -> float:
     val_b = _validate_num(b)
 
     if val_a and val_b:
+        if b == 0:
+            raise ValueError("Cannot divide by 0")
         return val_a / val_b
     else:   
         return "invalid input" #place holder, implement proper error later
