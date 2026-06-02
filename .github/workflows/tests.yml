@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6 #checkout code
       - name: Set up Python
-        uses: actions/ setup-python@v5
+        uses: actions/setup-python@v5
         with:
           python-verstion: '3.x'
       
