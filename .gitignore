@@ -1,2 +1,7 @@
 .venv
 __pycache__
+.pytest_cache
+
+# ignore pytest --cov reports
+.coverage
+coverage.*

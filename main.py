@@ -1,1 +1,4 @@
-from app.operations import addition,subtraction,multiplication,division
+from app.calculator import calculator
+
+
+calculator()
