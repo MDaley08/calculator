@@ -1,1 +1,1 @@
-from calculator import *
+from app.operations import addition,subtraction,multiplication,division
